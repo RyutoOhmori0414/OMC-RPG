@@ -1,0 +1,16 @@
+{
+    "name": "RPG.Battle.Player",
+    "rootNamespace": "",
+    "references": [
+        "GUID:38b614500bafe244f8bbc5287359535f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
