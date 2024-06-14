@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RPG.Battle.Player
@@ -19,5 +17,8 @@ namespace RPG.Battle.Player
 
         [SerializeField] private int _defense = 5;
         public int Defense => _defense;
+
+        [SerializeField] private SkillAttributeEnum _weakAttribute = SkillAttributeEnum.None;
+        public SkillAttributeEnum WeakAttribute => _weakAttribute;
     }   
 }

@@ -1,0 +1,18 @@
+using System;
+using UnityEngine;
+
+namespace RPG.Battle.Player
+{
+    [Serializable]
+    public sealed class #SCRIPTNAME# : ISkill
+    {
+        [SerializeField] private SkillAttributeEnum _skillAttribute = SkillAttributeEnum.None;
+        [SerializeField] private float _attackMultiplier = 1.0F;
+        [SerializeField] private float _weakMultiplier = 1.5F;
+
+        public void UseSkill(IDamageable user, IDamageable[] targets)
+        {
+            
+        }
+    }   
+}

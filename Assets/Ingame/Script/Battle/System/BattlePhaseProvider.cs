@@ -19,14 +19,16 @@ namespace RPG.Battle.System
         private void Publish()
         {
             var last = _currentPhase++;
+            bool isTurnChanged = false;
 
             if (_currentPhase > BattlePhase.StatusEffect)
             {
                 _currentPhase = BattlePhase.EnemyAttack;
                 _currentLoopCount++;
+                isTurnChanged = true;
             }
 
-            _publisher.Publish(new (_currentLoopCount, last, _currentPhase));
+            _publisher.Publish(new (_currentLoopCount, last, _currentPhase, isTurnChanged));
         }
 
         public void Start() => Publish();

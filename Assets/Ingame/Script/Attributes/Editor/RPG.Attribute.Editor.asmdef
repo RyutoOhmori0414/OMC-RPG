@@ -1,0 +1,16 @@
+{
+    "name": "RPG.Attribute.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:08982af589240f24dad22f8122eba5d4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
