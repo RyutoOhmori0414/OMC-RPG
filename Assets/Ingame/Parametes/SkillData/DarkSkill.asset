@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b3718897db3ba44a6628d4fca63a00, type: 3}
   m_Name: DarkSkill
   m_EditorClassIdentifier: 
-  _skillName: Skill
+  _skillName: Dark
   _skill:
-    rid: -2
+    rid: 885158882343124992
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 885158882343124992
+      type: {class: SingleAttackSkill, ns: RPG.Battle.Skill, asm: RPG.Battle}
+      data:
+        _skillAttribute: 16
+        _attackMultiplier: 1
+        _weakMultiplier: 1.5

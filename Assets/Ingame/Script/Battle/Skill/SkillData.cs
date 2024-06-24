@@ -1,10 +1,10 @@
 using UnityEngine;
 using RPG.Attribute;
 
-namespace RPG.Battle.Player
+namespace RPG.Battle.Skill
 {
     [CreateAssetMenu(fileName = "SkillData", menuName = "RPG/Data/SkillData")]
-    public class PlayerSkillDataScriptableObject : ScriptableObject
+    public class SkillData : ScriptableObject
     {
         [SerializeField] private string _skillName = "Skill";
         public string SkillName => _skillName;

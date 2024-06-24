@@ -16,7 +16,55 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 6260b2a2e2a917042bd1c33c953bae0b
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: a99d4e81eaa97e5488de94327b0c60ab
+    m_Address: TestEnemy
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - EnemyData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97a0d7b157c3515418eabc1e393609e3
+    m_Address: PlayerData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - PlayerData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76c54c96e6a72734fb1fbe940c54974a
+    m_Address: IceSkill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SkillData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c7ea91357134744da3fea5744a48e12
+    m_Address: WindSkill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SkillData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: caa62def1962b504f8ba24c85b0949bf
+    m_Address: HealSkill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SkillData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c350312151749f342a985b05a21edf66
+    m_Address: FireSkill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SkillData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 807afe617c09fac4695cbd62639b2e31
+    m_Address: ShineSkill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SkillData
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3096afe96a97b404ea910c9517ec520d
+    m_Address: DarkSkill
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - SkillData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 203da438871b40841ac5780a38ba5865, type: 2}
   m_SchemaSet:

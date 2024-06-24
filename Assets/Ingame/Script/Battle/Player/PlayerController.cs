@@ -9,9 +9,9 @@ using VContainer;
 
 namespace RPG.Battle.Player
 {
-    public sealed class PlayerController : MonoBehaviour, IDamageable
+    public sealed class PlayerController : MonoBehaviour, IDamageable, ILoadable
     {
-        private PlayerDataScriptableObject _playerData;
+        private PlayerData _playerData;
         private bool _isPlayerDataLoaded = false;
         [Inject] private ISubscriber<PhaseCallback> _phaseSubscriber;
 
@@ -81,20 +81,19 @@ namespace RPG.Battle.Player
         {
             // サブスクライバーに関数を登録
             _phaseSubscriber.Subscribe(OnPhaseChangeReceived).AddTo(this.GetCancellationTokenOnDestroy());
-            LoadPlayerDataAsync(this.GetCancellationTokenOnDestroy()).Forget();
         }
-
-        private async UniTask LoadPlayerDataAsync(CancellationToken ct)
+        
+        public async UniTask LoadAsync(CancellationToken ct)
         {
             // PlayerDataのロード
-            _playerData = await Addressables.LoadAssetAsync<PlayerDataScriptableObject>("PlayerData")
+            _playerData = await Addressables.LoadAssetAsync<PlayerData>("PlayerData")
                 .ToUniTask(cancellationToken: ct);
             
             LoadedInit();
 
             _isPlayerDataLoaded = true;
         }
-        
+
         /// <summary>ロード後の初期化処理</summary>
         void LoadedInit()
         {

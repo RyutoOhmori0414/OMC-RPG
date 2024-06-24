@@ -1,16 +1,16 @@
 using UnityEngine;
 
-namespace RPG.Battle.Player
+namespace RPG.Battle.Enemy
 {
-    [CreateAssetMenu(fileName = "PlayerData", menuName = "RPG/Data/PlayerData")]
-    public sealed class PlayerDataScriptableObject : ScriptableObject
+    [CreateAssetMenu(fileName = "Enemy", menuName = "RPG/Data/EnemyData")]
+    public sealed class EnemyDataScriptableObject : ScriptableObject
     {
         [Header("ゴッドモード")]
         [SerializeField] private bool _isGodMode = false;
         public bool IsGodMode => _isGodMode;
-        [Header("PlayerData")]
-        [SerializeField] private int _playerHp = 100;
-        public int PlayerHp => _playerHp;
+        [Header("EnemyData")]
+        [SerializeField] private int _enemyHp = 100;
+        public int EnemyHp => _enemyHp;
 
         [SerializeField] private int _attack = 20;
         public int Attack => _attack;

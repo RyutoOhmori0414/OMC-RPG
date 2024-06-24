@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillName: Wind
   _skill:
-    rid: 885158872287805441
+    rid: 885158882385854466
   references:
     version: 2
     RefIds:
-    - rid: 885158872287805441
-      type: {class: SingleAttackSkill, ns: RPG.Battle.Player, asm: RPG.Battle.Player}
+    - rid: 885158882385854466
+      type: {class: SingleAttackSkill, ns: RPG.Battle.Skill, asm: RPG.Battle}
       data:
         _skillAttribute: 4
         _attackMultiplier: 1

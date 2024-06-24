@@ -1,10 +1,10 @@
 using System;
 using UnityEngine;
 
-namespace RPG.Battle.Player
+namespace RPG.Battle.Skill
 {
     [Serializable]
-    public sealed class MultiBuffSkill : ISkill
+    public sealed class SingleBuffSkill : ISkill
     {
         [SerializeField] private float _attackMultiplier = 1.0F;
         [SerializeField] private int _buffTurn = 3;
@@ -12,10 +12,7 @@ namespace RPG.Battle.Player
 
         public void UseSkill(IDamageable user, IDamageable[] targets)
         {
-            foreach (var target in targets)
-            {
-                target.SetBuff(new IDamageable.BuffData(_buffTurn, _attackMultiplier, _buffType));   
-            }
+            user.SetBuff(new IDamageable.BuffData(_buffTurn, _attackMultiplier, _buffType));
         }
     }   
 }

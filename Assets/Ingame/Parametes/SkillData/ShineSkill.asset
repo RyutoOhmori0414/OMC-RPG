@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87b3718897db3ba44a6628d4fca63a00, type: 3}
   m_Name: ShineSkill
   m_EditorClassIdentifier: 
-  _skillName: Wind
+  _skillName: Shine
   _skill:
-    rid: 885158872287805441
+    rid: 885158882385854465
   references:
     version: 2
     RefIds:
-    - rid: 885158872287805441
-      type: {class: SingleAttackSkill, ns: RPG.Battle.Player, asm: RPG.Battle.Player}
+    - rid: 885158882385854465
+      type: {class: SingleAttackSkill, ns: RPG.Battle.Skill, asm: RPG.Battle}
       data:
-        _skillAttribute: 4
+        _skillAttribute: 8
         _attackMultiplier: 1
         _weakMultiplier: 1.5

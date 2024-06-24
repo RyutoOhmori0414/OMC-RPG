@@ -14,9 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillName: Skill
   _skill:
-    rid: -2
+    rid: 885158882385854468
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
+    - rid: 885158882385854468
+      type: {class: HealSkill, ns: RPG.Battle.Skill, asm: RPG.Battle}
+      data:
+        _healMultiplier: 1

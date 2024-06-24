@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillName: Fire
   _skill:
-    rid: 885158843495481354
+    rid: 885158882385854464
   references:
     version: 2
     RefIds:
-    - rid: 885158843495481354
-      type: {class: SingleAttackSkill, ns: RPG.Battle.Player, asm: RPG.Battle.Player}
+    - rid: 885158882385854464
+      type: {class: SingleAttackSkill, ns: RPG.Battle.Skill, asm: RPG.Battle}
       data:
-        _skillAttribute: 0
+        _skillAttribute: 1
         _attackMultiplier: 1
         _weakMultiplier: 1.5

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace RPG.Battle.Player
+namespace RPG.Battle.Skill
 {
     [Serializable]
     public sealed class HealSkill : ISkill

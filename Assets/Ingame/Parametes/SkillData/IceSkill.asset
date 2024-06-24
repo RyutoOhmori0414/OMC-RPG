@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _skillName: Ice
   _skill:
-    rid: 885158872287805440
+    rid: 885158895427256320
   references:
     version: 2
     RefIds:
-    - rid: 885158872287805440
-      type: {class: SingleAttackSkill, ns: RPG.Battle.Player, asm: RPG.Battle.Player}
+    - rid: 885158895427256320
+      type: {class: SingleAttackSkill, ns: RPG.Battle.Skill, asm: RPG.Battle}
       data:
-        _skillAttribute: 6
+        _skillAttribute: 2
         _attackMultiplier: 1
         _weakMultiplier: 1.5

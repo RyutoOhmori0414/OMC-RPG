@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 6260b2a2e2a917042bd1c33c953bae0b
   m_currentHash:
     serializedVersion: 2
-    Hash: 100fe29a01ad1c9125d1b4f5ee026523
+    Hash: 7cb11b88fa183308d51829006a9d66a3
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -88,6 +88,9 @@ MonoBehaviour:
   m_LabelTable:
     m_LabelNames:
     - default
+    - EnemyData
+    - PlayerData
+    - SkillData
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 3bf69e534f5381b4397b2a726f04581c, type: 2}

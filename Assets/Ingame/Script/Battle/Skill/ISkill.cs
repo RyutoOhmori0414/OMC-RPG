@@ -1,4 +1,4 @@
-namespace RPG.Battle.Player
+namespace RPG.Battle.Skill
 {
     public interface ISkill
     {
