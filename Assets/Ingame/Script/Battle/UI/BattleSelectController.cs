@@ -1,10 +1,7 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace RPG.Battle.UI
 {
@@ -15,6 +12,10 @@ namespace RPG.Battle.UI
         [SerializeField] private RectTransform _closeAncher;
         [SerializeField] private float _openAndCloseSec = 1;
 
+        [SerializeField] private GameObject _selectButton;
+
+        private Tweener _animTweener;
+        
         private void Awake()
         {
             gameObject.SetActive(false);
@@ -23,12 +24,17 @@ namespace RPG.Battle.UI
 
         public override void OpenUI()
         {
-            _animRoot.DOMove(_openAncher.position, _openAndCloseSec).OnStart(() => gameObject.SetActive(true));
+            _animTweener?.Complete();
+            
+            EventSystem.current.SetSelectedGameObject(_selectButton);
+            _animTweener = _animRoot.DOMove(_openAncher.position, _openAndCloseSec).OnStart(() => gameObject.SetActive(true));
         }
 
         public override void CloseUI()
         {
-            _animRoot.DOMove(_closeAncher.position, _openAndCloseSec).OnComplete(() => gameObject.SetActive(false));
+            _animTweener?.Complete();
+            
+            _animTweener = _animRoot.DOMove(_closeAncher.position, _openAndCloseSec).OnComplete(() => gameObject.SetActive(false));
         }
     }   
 }

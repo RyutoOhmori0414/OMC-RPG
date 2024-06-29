@@ -3,10 +3,15 @@
     "rootNamespace": "RPG.Battle.UI",
     "references": [
         "GUID:0c71e33c619093345af5fa38decd7c74",
+        "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
         "GUID:08982af589240f24dad22f8122eba5d4",
         "GUID:38b614500bafe244f8bbc5287359535f",
+        "GUID:0431a3f4b86aad2409e6421e6c8fd086",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:029c1c1b674aaae47a6841a0b89ad80e"
+        "GUID:029c1c1b674aaae47a6841a0b89ad80e",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

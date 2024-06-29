@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using RPG.Battle.Enemy;
 using RPG.Battle.UI;
 using UnityEngine;
@@ -16,7 +14,7 @@ namespace RPG.Battle.System
         {
             _enemyUI.SetEnemies(Array.ConvertAll(
                 _enemies, 
-                x => new ScreenSpaceEnemyUI.EnemyUIData(x.transform, x)
+                x => new ScreenSpaceEnemyUI.TargetData(x.transform, x)
                 ));
         }
     }   

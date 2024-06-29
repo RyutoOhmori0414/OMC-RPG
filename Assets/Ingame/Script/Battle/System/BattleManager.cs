@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using RPG.Battle.Player;
 using RPG.Battle.UI;
 using UnityEngine;
@@ -32,6 +28,11 @@ namespace RPG.Battle.System
         {
             _uiSkill.SetSkillData(_skillManager.PlayerSkill);
             _battleSelect.OpenUI();
+        }
+
+        private void UseSkill()
+        {
+            
         }
     }   
 }

@@ -6,20 +6,44 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using VContainer;
 
-namespace RPG.Battle.Player
+namespace RPG.Battle.Enemy
 {
-    public sealed class PlayerController : MonoBehaviour, IDamageable, ILoadable
+    public sealed class EnemyController : MonoBehaviour, IDamageable, ILoadable
     {
-        private PlayerData _playerData;
-        private bool _isPlayerDataLoaded = false;
-        [Inject] private ISubscriber<PhaseCallback> _phaseSubscriber;
+        [Inject] private ISubscriber<PhaseCallback> _subscriber;
+        [SerializeField] private AssetReference _assetReference;
 
+        private EnemyDataScriptableObject _enemyData;
+        private bool _isEnemyDataLoaded = false;
+        
         private List<IDamageable.BuffData> _attackBuffData = new();
         private List<IDamageable.BuffData> _defenseBuffData = new();
-        private int _rawAttack = 0;
-        private int _rawDefense = 0;
+        private int _rawAttack = -1;
+        private int _rawDefense = -1;
         
-        public int CurrentHp { get;　private set; } = -1;
+        public int CurrentHp { get; private set; } = -1;
+        
+        public int MaxHp
+        {
+            get
+            {
+                if (_isEnemyDataLoaded) return _enemyData.EnemyHp;
+                
+                Debug.LogWarning("EnemyDataがLoadされていません");
+                return -1;
+            }
+        }
+
+        public SkillAttributeEnum WeakAttribute
+        {
+            get
+            {
+                if (_isEnemyDataLoaded) return _enemyData.WeakAttribute;
+                
+                Debug.LogWarning("EnemyDataがLoadされていません");
+                return SkillAttributeEnum.None;
+            }
+        }
 
         public int Attack
         {
@@ -54,53 +78,19 @@ namespace RPG.Battle.Player
             set => _rawDefense = value;
         }
 
-        public int MaxHp
-        {
-            get
-            {
-                if (_isPlayerDataLoaded) return _playerData.PlayerHp;
-
-                Debug.LogWarning("PlayerDataがLoadされていません");
-                return -1;
-            }
-        }
-
-        public SkillAttributeEnum WeakAttribute
-        {
-            get
-            {
-                if (_isPlayerDataLoaded) return _playerData.WeakAttribute;
-                
-                Debug.LogWarning("PlayerDataがLoadされていません");
-                return SkillAttributeEnum.None;
-            }
-        }
-
         private void Awake()
         {
-            // サブスクライバーに関数を登録
-            _phaseSubscriber.Subscribe(OnPhaseChangeReceived).AddTo(this.GetCancellationTokenOnDestroy());
+            _subscriber.Subscribe(OnPhaseChangeReceived);
         }
         
         public async UniTask LoadAsync(CancellationToken ct)
         {
-            // PlayerDataのロード
-            _playerData = await Addressables.LoadAssetAsync<PlayerData>("PlayerData")
+            _enemyData = await Addressables.LoadAssetAsync<EnemyDataScriptableObject>(_assetReference)
                 .ToUniTask(cancellationToken: ct);
-            
-            LoadedInit();
 
-            _isPlayerDataLoaded = true;
+            _isEnemyDataLoaded = true;
         }
-
-        /// <summary>ロード後の初期化処理</summary>
-        void LoadedInit()
-        {
-            CurrentHp = _playerData.PlayerHp;
-            Attack = _playerData.Attack;
-            Defense = _playerData.Defense;
-        }
-
+        
         private void OnPhaseChangeReceived(PhaseCallback callback)
         {
             if (callback.IsTurnChanged)

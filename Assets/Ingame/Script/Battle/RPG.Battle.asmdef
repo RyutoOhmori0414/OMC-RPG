@@ -1,17 +1,17 @@
 {
-    "name": "RPG.Battle",
-    "rootNamespace": "RPG.Battle",
-    "references": [
-        "GUID:08982af589240f24dad22f8122eba5d4",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
-    ],
-    "includePlatforms": [],
-    "excludePlatforms": [],
-    "allowUnsafeCode": false,
-    "overrideReferences": false,
-    "precompiledReferences": [],
-    "autoReferenced": true,
-    "defineConstraints": [],
-    "versionDefines": [],
-    "noEngineReferences": false
+  "name": "RPG.Battle",
+  "rootNamespace": "RPG.Battle",
+  "references": [
+    "GUID:08982af589240f24dad22f8122eba5d4",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
 }
