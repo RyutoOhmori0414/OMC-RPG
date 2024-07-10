@@ -1,0 +1,27 @@
+{
+  "name": "RPG.Debug",
+  "rootNamespace": "RPG.Debug",
+  "references": [
+    "GUID:08b38f39e2d9e594389b7a4cf4c2c338",
+    "GUID:4f682e06dbb3e624faedad9cc27106cc",
+    "GUID:08982af589240f24dad22f8122eba5d4",
+    "GUID:38b614500bafe244f8bbc5287359535f",
+    "GUID:50988fd85dbcb8041a26b652aa442bf9",
+    "GUID:a870044a56b1ab1428d4bd1a61cf2bf2",
+    "GUID:c1c7ed79e3aeead46aa21d91d1f7cee0",
+    "GUID:25f0528599abdc04cabb240e1fdd0cb2",
+    "GUID:0431a3f4b86aad2409e6421e6c8fd086",
+    "GUID:560b04d1a97f54a4e82edc0cbbb69285",
+    "GUID:f51ebe6a0ceec4240a699833d6309b23",
+    "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

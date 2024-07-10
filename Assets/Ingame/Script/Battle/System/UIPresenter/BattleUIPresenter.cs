@@ -1,4 +1,3 @@
-using System;
 using RPG.Battle.Player;
 using RPG.Battle.UI;
 using UniRx;
@@ -9,7 +8,7 @@ namespace RPG.Battle.System
     public sealed class BattleUIPresenter : MonoBehaviour
     {
         [Header("Model")]
-        [SerializeField] private PlayerAttackController _playerAttack;
+        [SerializeField] private AttackManager _attack;
 
         [Header("View")]
         [SerializeField] private ScreenSpaceEnemyUI _enemyTarget;
@@ -17,7 +16,8 @@ namespace RPG.Battle.System
 
         private void Awake()
         {
-            _enemyTarget.OnTargetSelected.Subscribe(skills => _playerAttack.Attack(_skill.CurrentSkill, skills));
+            _enemyTarget.OnTargetSelected.Subscribe(target => _attack.StartPlayerAttack(_skill.CurrentSkill, target))
+                .AddTo(this);
         }
     }
 }

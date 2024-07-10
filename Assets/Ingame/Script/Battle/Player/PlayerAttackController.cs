@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using RPG.Battle.Skill;
 using UnityEngine;
 
 namespace RPG.Battle.Player
 {
-    public class PlayerAttackController : MonoBehaviour
+    public sealed class PlayerAttackController : MonoBehaviour
     {
         [SerializeField] private PlayerController _playerDamageable;
         

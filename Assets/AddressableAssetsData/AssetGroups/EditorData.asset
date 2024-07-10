@@ -10,16 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Battle
+  m_Name: EditorData
   m_EditorClassIdentifier: 
-  m_GroupName: Packed Assets
+  m_GroupName: EditorData
   m_Data:
     m_SerializedData: []
-  m_GUID: 8ed58838b547f694ca8c2e3ce0131480
-  m_SerializeEntries: []
+  m_GUID: 07dd1cbba052c5c4b85eb8398d78fbb7
+  m_SerializeEntries:
+  - m_GUID: fa56399b0ef02c04aa5f956f5624a468
+    m_Address: kkrn_icon_ken_2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - EditorData
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 203da438871b40841ac5780a38ba5865, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 84b830ac26c60ff418e466fd6fa5cc9d, type: 2}
-    - {fileID: 11400000, guid: 587c687f7da5c584b8b65fc7891a4d74, type: 2}
+    - {fileID: 11400000, guid: def380ecc3f7c5c40a12910f7127814f, type: 2}
+    - {fileID: 11400000, guid: 7b9ed01818b9f3842af375cacab5fea3, type: 2}

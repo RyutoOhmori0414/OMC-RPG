@@ -14,6 +14,11 @@ namespace RPG.Battle.Player
         private bool _isPlayerDataLoaded = false;
         [Inject] private ISubscriber<PhaseCallback> _phaseSubscriber;
 
+        [SerializeField] private Transform _frontTransform;
+        
+        Transform IDamageable.Transform => transform.root;
+        Transform IDamageable.FrontTransform => _frontTransform;
+
         private List<IDamageable.BuffData> _attackBuffData = new();
         private List<IDamageable.BuffData> _defenseBuffData = new();
         private int _rawAttack = 0;

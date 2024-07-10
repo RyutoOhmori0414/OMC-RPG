@@ -12,6 +12,10 @@ namespace RPG.Battle.Enemy
     {
         [Inject] private ISubscriber<PhaseCallback> _subscriber;
         [SerializeField] private AssetReference _assetReference;
+        [SerializeField] private Transform _frontTransform;
+
+        Transform IDamageable.Transform => transform.root;
+        Transform IDamageable.FrontTransform => _frontTransform;
 
         private EnemyDataScriptableObject _enemyData;
         private bool _isEnemyDataLoaded = false;

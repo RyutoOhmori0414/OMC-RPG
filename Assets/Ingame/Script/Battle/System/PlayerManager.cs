@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using RPG.Battle.Player;
 using RPG.Battle.UI;
 using UnityEngine;

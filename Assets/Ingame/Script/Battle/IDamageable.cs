@@ -1,9 +1,12 @@
 using System;
+using UnityEngine;
 
 namespace RPG.Battle
 {
     public interface IDamageable
     {
+        public Transform Transform { get; }
+        public Transform FrontTransform { get; }
         public int MaxHp { get; }
         public int CurrentHp { get; }
         public SkillAttributeEnum WeakAttribute { get; }

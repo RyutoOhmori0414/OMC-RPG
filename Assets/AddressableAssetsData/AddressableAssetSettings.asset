@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 6260b2a2e2a917042bd1c33c953bae0b
   m_currentHash:
     serializedVersion: 2
-    Hash: 7cb11b88fa183308d51829006a9d66a3
+    Hash: 43cd24cb6eb88c3743fef304f608ba26
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_GroupAssets:
   - {fileID: 11400000, guid: 3b4532d0429836d4e8e62b9fed4adb87, type: 2}
   - {fileID: 11400000, guid: d8727cb95d391f3438360cf033936b1c, type: 2}
-  - {fileID: 11400000, guid: 92147f11cd620454e9ddc7d682159ee3, type: 2}
+  - {fileID: 11400000, guid: 417e8c9197e1af047b0067d5aba9e14a, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -91,6 +91,7 @@ MonoBehaviour:
     - EnemyData
     - PlayerData
     - SkillData
+    - EditorData
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 3bf69e534f5381b4397b2a726f04581c, type: 2}

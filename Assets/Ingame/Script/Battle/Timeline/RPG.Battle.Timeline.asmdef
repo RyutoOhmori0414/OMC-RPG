@@ -1,0 +1,17 @@
+{
+    "name": "RPG.Battle.Timeline",
+    "rootNamespace": "RPG.Battle.Timeline",
+    "references": [
+        "GUID:f06555f75b070af458a003d92f9efb00",
+        "GUID:38b614500bafe244f8bbc5287359535f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
